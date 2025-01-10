@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check your symptoms - NHS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="nhsuk-header">
+        <div class="nhsuk-header__container">
+            <div class="nhsuk-header__logo">
+                <a href="/" class="nhsuk-header__link">
+                    NHS
+                </a>
+            </div>
+            <nav class="nhsuk-header__nav">
+                <ul class="nhsuk-header__navigation">
+                    <li class="nhsuk-header__navigation-item">
+                        <a href="#">Health A-Z</a>
+                    </li>
+                    <li class="nhsuk-header__navigation-item">
+                        <a href="#">Live Well</a>
+                    </li>
+                    <li class="nhsuk-header__navigation-item">
+                        <a href="#">Mental Health</a>
+                    </li>
+                    <li class="nhsuk-header__navigation-item">
+                        <a href="#">Care and Support</a>
+                    </li>
+                    <li class="nhsuk-header__navigation-item">
+                        <a href="#" id="loginBtn">Sign in</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="nhsuk-hero">
+        <div class="nhsuk-hero__container">
+            <div class="nhsuk-hero__content">
+                <h1>Check your symptoms</h1>
+                <p>Find out what a symptom might mean and what to do next.</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="nhsuk-main-wrapper">
+        <div class="nhsuk-width-container">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-main-content">
+                    <div class="nhsuk-care-card nhsuk-care-card--primary">
+                        <div class="nhsuk-care-card__heading-container">
+                            <h2 class="nhsuk-care-card__heading">Record your symptoms</h2>
+                        </div>
+                        <div class="nhsuk-care-card__content">
+                            <form id="symptomForm">
+                                <div class="nhsuk-form-group">
+                                    <div class="nhsuk-checkboxes">
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="checkbox" name="symptoms" value="Fever" id="fever">
+                                            <label for="fever">High temperature or fever</label>
+                                        </div>
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="checkbox" name="symptoms" value="Cough" id="cough">
+                                            <label for="cough">New, continuous cough</label>
+                                        </div>
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="checkbox" name="symptoms" value="Fatigue" id="fatigue">
+                                            <label for="fatigue">Extreme tiredness (fatigue)</label>
+                                        </div>
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="checkbox" name="travel" value="true" id="travel">
+                                            <label for="travel">International travel in the last 14 days</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="nhsuk-button">Check my symptoms</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-card">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading">Your risk assessment</h2>
+                            <div id="riskDisplay" class="risk-display"></div>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-care-card nhsuk-care-card--primary">
+                        <div class="nhsuk-care-card__heading-container">
+                            <h2 class="nhsuk-care-card__heading">NHS advice</h2>
+                        </div>
+                        <div class="nhsuk-care-card__content">
+                            <ul id="adviceList" class="nhsuk-list"></ul>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-card">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading">Your symptom history</h2>
+                            <div id="historyDisplay"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="nhsuk-related-nav">
+                    <div class="nhsuk-card">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading">Useful links</h2>
+                            <ul class="nhsuk-list">
+                                <li><a href="#">When to call 111</a></li>
+                                <li><a href="#">Find a GP</a></li>
+                                <li><a href="#">Mental health services</a></li>
+                                <li><a href="#">NHS App</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-warning-callout">
+                        <h3>Important</h3>
+                        <p>If you have severe symptoms, call 999 or go to A&E immediately.</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="nhsuk-footer">
+        <div class="nhsuk-width-container">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-footer__list">
+                    <ul>
+                        <li class="nhsuk-footer__list-item">
+                            <a href="#">NHS sites</a>
+                        </li>
+                        <li class="nhsuk-footer__list-item">
+                            <a href="#">About us</a>
+                        </li>
+                        <li class="nhsuk-footer__list-item">
+                            <a href="#">Contact us</a>
+                        </li>
+                        <li class="nhsuk-footer__list-item">
+                            <a href="#">Profile editor</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+        </div>
+    </footer>
+
+    <div class="login-modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2>Sign in to your NHS account</h2>
+            <form id="loginForm" class="login-form">
+                <div class="nhsuk-form-group">
+                    <input type="email" placeholder="NHS account email" required>
+                </div>
+                <div class="nhsuk-form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="nhsuk-button">Sign in</button>
+                <p>Don't have an NHS account? <a href="#">Create one now</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
